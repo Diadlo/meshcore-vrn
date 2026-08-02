@@ -1,0 +1,11 @@
+baseURL = 'https://meshcore-vrn.diadlo.ru/'
+locale = 'ru-ru'
+title = 'MeshCore Воронеж'
+theme = 'hugo-book'
+
+[menu]
+[[menu.home]]
+  name = 'Telegram'
+  pageRef = 'https://t.me/meshcoreVRN'
+  weight = 1
+
