@@ -1,0 +1,7 @@
+{{- $name := .Get "name" | default (.Get 0) }}
+{{- $page := .Site.GetPage (printf "snippets/%s" $name) }}
+{{- if not $page }}
+  {{- errorf "Сниппет не найден: %q" $name }}
+{{- else }}
+  {{- $page.Content }}
+{{- end }}
