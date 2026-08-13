@@ -1,0 +1,51 @@
+{{- /* Фильтр прошивок: набор тегов + карточки в .Inner с data-tags="репитер наблюдатель" */ -}}
+{{- $tags := split (.Get "tags" | default "компаньон репитер наблюдатель бридж") " " -}}
+
+<div class="firmware-filter">
+  <label class="firmware-filter__label" for="firmware-filter-select">Фильтр по роли:</label>
+  <select id="firmware-filter-select" class="firmware-filter__select" multiple size="4">
+    {{- range $tags }}
+    <option value="{{ . }}">{{ . }}</option>
+    {{- end }}
+  </select>
+
+  <div class="firmware-filter__list">
+    {{ .Inner }}
+  </div>
+</div>
+
+<script>
+(function () {
+  var live = function (id, fn) {
+    var els = document.querySelectorAll(id);
+    for (var i = 0; i < els.length; i++) fn(els[i]);
+    document.addEventListener('DOMContentLoaded', function () {
+      var els2 = document.querySelectorAll(id);
+      for (var j = 0; j < els2.length; j++) fn(els2[j]);
+    });
+  };
+  live('#firmware-filter-select', function (select) {
+    var cards = document.querySelectorAll('.firmware-filter__list .fw-card');
+
+    function visible(cardTags, selected) {
+      if (selected.length === 0) return true; // ничего не выбрано — показать все
+      return selected.some(function (s) { return cardTags.indexOf(s) !== -1; });
+    }
+
+    function apply() {
+      var selected = Array.prototype.filter.call(select.options, function (o) {
+        return o.selected;
+      }).map(function (o) { return o.value; });
+
+      for (var i = 0; i < cards.length; i++) {
+        var card = cards[i];
+        var cardTags = (card.getAttribute('data-tags') || '').split(' ');
+        card.style.display = visible(cardTags, selected) ? '' : 'none';
+      }
+    }
+
+    select.addEventListener('change', apply);
+    apply();
+  });
+})();
+</script>
