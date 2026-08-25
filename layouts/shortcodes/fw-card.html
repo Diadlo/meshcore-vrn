@@ -1,0 +1,5 @@
+{{- /* Карточка прошивки: рендерит markdown внутри div. Теги через параметр tags. */ -}}
+{{- $tags := .Get "tags" | default "" -}}
+<div class="fw-card" data-tags="{{ $tags }}">
+  {{- .Inner | markdownify -}}
+</div>

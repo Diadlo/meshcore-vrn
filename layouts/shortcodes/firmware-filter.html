@@ -1,4 +1,4 @@
-{{- /* Фильтр прошивок: набор тегов + карточки в .Inner с data-tags="репитер наблюдатель" */ -}}
+{{- /* Фильтр прошивок: выпадающий список тегов + контейнер карточек. Карточки — через {{< fw-card >}} внутри. */ -}}
 {{- $tags := split (.Get "tags" | default "компаньон репитер наблюдатель бридж") " " -}}
 
 <div class="firmware-filter">
@@ -28,7 +28,7 @@
     var cards = document.querySelectorAll('.firmware-filter__list .fw-card');
 
     function visible(cardTags, selected) {
-      if (selected.length === 0) return true; // ничего не выбрано — показать все
+      if (selected.length === 0) return true;
       return selected.some(function (s) { return cardTags.indexOf(s) !== -1; });
     }
 

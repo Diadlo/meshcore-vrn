@@ -3,6 +3,9 @@ locale = 'ru-ru'
 title = 'MeshCore Воронеж'
 theme = 'hugo-book'
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [menu]
 [[menu.home]]
   name = 'Telegram'
