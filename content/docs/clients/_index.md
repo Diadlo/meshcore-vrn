@@ -14,6 +14,7 @@ title = 'Клиенты'
 
 * [Google Play](https://play.google.com/store/apps/details?id=com.liamcottle.meshcore.android)
 * [App Store](https://apps.apple.com/us/app/meshcore/id6742354151)
+* [Веб-версия (для ПК)](https://app.meshcore.nz)
 
 {{< gallery-3 >}}
   {{< image src="/docs/clients/img/official-users.jpg" >}}
@@ -87,3 +88,15 @@ MeshCore Open Advanced является ответвлением MeshCore Open �
 
 * [Исходники на Github](https://github.com/HDDen/meshcore-open)
 * [Группа в ТГ](https://t.me/mcoadvanced/)
+
+### Канал #public_mco
+
+Канал `#public_mco` работает только в MCO Advanced. Настройка канала:
+
+1. В приложении перейдите в раздел каналов.
+2. Нажмите и удерживайте канал, который хотите изменить.
+3. Выберите «Изменить канал».
+4. Установите параметры:
+   - **Используемое сжатие:** `MCMP`
+   - **Версия:** `v3`
+   - **Проверка подписи:** опционально, включается для безопасности, но увеличивает размер пакета.
