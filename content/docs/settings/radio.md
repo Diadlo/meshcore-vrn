@@ -10,19 +10,10 @@ title = 'Настройки радио'
 
 Прим: Coding rate можно повысить на компаньоне если слышите, но не добиваете до ретрансляторов
 
-### 868MHz
-
-Частота 868.731 МГц
-Полоса 62.5 кГц
-[Spreading Factor](/docs/settings/metrics#spreading-factor) 8
-Coding Rate 6
-
-### 433MHz
-
-Частота 434.300
-Полоса 62.5
-[Spreading factor](/docs/settings/metrics#spreading-factor) 9
-Coding Rate 5
+| Диапазон | Частота    | Полоса   | SF | CR |
+|----------|------------|----------|----|----|
+| 868MHz   | 868.731 МГц | 62.5 кГц | 8  | 6  |
+| 433MHz   | 434.300 МГц | 62.5 кГц | 9  | 5  |
 
 ## Другое
 
