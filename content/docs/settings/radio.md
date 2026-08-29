@@ -14,14 +14,14 @@ title = 'Настройки радио'
 
 Частота 868.731 МГц
 Полоса 62.5 кГц
-Spreading Factor 8
+[Spreading Factor](/docs/settings/metrics#spreading-factor) 8
 Coding Rate 6
 
 ### 433MHz
 
 Частота 434.300
 Полоса 62.5
-Spreading factor 9
+[Spreading factor](/docs/settings/metrics#spreading-factor) 9
 Coding Rate 5
 
 ## Другое
