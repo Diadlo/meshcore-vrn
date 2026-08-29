@@ -13,14 +13,18 @@ title = 'Устройства'
 
 Аналог Heltec v3, но без дисплея.
 
-{{< image src="/docs/hardware/img/heltech-v3-lite.jpg" >}}
+| {{< image src="/docs/hardware/img/heltech-v3-lite.jpg" >}} |
+|:--:|
+| Место подключения антенны |
 
 | mAh | Время жизни |
 |-----|-------------|
 
 ## Heltec v4
 
-{{< image src="/docs/hardware/img/heltech-v4.jpg" >}}
+| {{< image src="/docs/hardware/img/heltech-v4.jpg" >}} |
+|:--:|
+| Место подключения антенны |
 
 | mAh | Время жизни |
 |-----|-------------|
